@@ -36,38 +36,73 @@
 / {
 	behaviors {
 	        bhm: balanced_homerow_mods {
-	            compatible = "zmk,behavior-hold-tap";
-	            label = "HOMEROW_MODS";
-	            #binding-cells = <2>;
-	            tapping-term-ms = <200>;    // <---[[moderate duration]]
-	            quick-tap-ms = <0>;
-	            flavor = "balanced";
-	            bindings = <&kp>, <&kp>;
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS";
+			#binding-cells = <2>;
+			tapping-term-ms = <200>;    // <---[[moderate duration]]
+			quick-tap-ms = <0>;
+			flavor = "balanced";
+			bindings = <&kp>, <&kp>;
 	        };
+
+		td0: tap_dance_0 {
+			compatible = "zmk,behavior-tap-dance";
+			label = "TAP_DANCE_0";
+			#binding-cells = <34>;
+			tapping-term-ms = <150>;
+			bindings = <&kp LSHFT>, <&caps_word>;
+		};
     	};
-	
+
 	combos {
 			compatible = "zmk,combos";
-	
-			// Both left thumb keys
+
+			combo_grave {
+				timeout-ms = <35>;
+				key-positions = <0 1>;
+				bindings = <&kp GRAVE>;
+			};
+
 			combo_esc {
-				timeout-ms = <50>;
-				key-positions = <30 31>;
+				timeout-ms = <35>;
+				key-positions = <1 2>;
 				bindings = <&kp ESC>;
 			};
-	
-			// Both right thumb keys
+
+			combo_backspace {
+				timeout-ms = <50>;
+				key-positions = <11 12>;
+				bindings = <&kp BSPC>;
+			};
+
 			combo_delete {
 				timeout-ms = <50>;
-				key-positions = <32 33>;
+				key-positions = <12 13>;
 				bindings = <&kp DEL>;
 			};
-	
-			// External left and right thumb keys
-			combo_caps_word {
+
+			combo_left_parenthesis {
+				timeout-ms = <35>;
+				key-positions = <6 7>;
+				bindings = <&kp LPRN>;
+			};
+
+			combo_right_parenthesis {
+				timeout-ms = <35>;
+				key-positions = <7 8>;
+				bindings = <&kp RPRN>;
+			};
+
+			combo_semicolon {
+				timeout-ms = <35>;
+				key-positions = <16 17>;
+				bindings = <&kp SEMI>;
+			};
+
+			combo_enter {
 				timeout-ms = <50>;
-				key-positions = <31 32>;
-				bindings = <&caps_word>;
+				key-positions = <17 18>;
+				bindings = <&kp ENTER>;
 			};
 		};
 
@@ -86,7 +121,7 @@
 			//│  J	     │	V	│  D	   │  M       │	 Z	 │   │	P	│  H	   │  , <     │  . >	 │ / ?	    │
 			   &kp J      &kp V	  &kp D	     &kp M	&kp Z	       &kp P	  &kp H	     &kp COMMA	&kp DOT	   &kp FSLH
 			//╰──────────┴──────────┴─30───────┼─31───────┼─32───────┤   ├─33───────┼─34───────┼─35───────┴──────────┴──────────╯
-			                          &none	     &mo 1	&lt 2 TAB      &kp SPACE  &sk LSHFT  &none
+			                          &none	     &mo 1	&lt 2 TAB      &kp SPACE  &td0       &none
 			//			╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 			>;
                 };
