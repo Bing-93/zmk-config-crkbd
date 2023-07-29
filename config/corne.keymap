@@ -16,9 +16,22 @@
  * reserve
  */
 
+//========================================================
+//===================== For MacOS ========================
+//========================================================
+
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &hm LCTRL k1	&hm LALT k2  &hm LGUI k3  &hm LSHFT k4
 #define HRMR(k1,k2,k3,k4) &hm RSHFT k1	&hm RGUI k2  &hm RALT k3  &hm RCTRL k4
+
+// MacOS shortcuts 
+#define GUI_C 	&kp LG(X)
+#define GUI_Y 	&kp LG(Y)
+#define GUI_W 	&kp LG(W)
+#define GUI_K  	&kp LG(K)
+#define GUI_C 	&kp LG(C)
+#define GUI_V	&kp LG(V)
+#define GUI_Z	&kp LG(Z)
 
 / {
         keymap {
@@ -59,17 +72,19 @@
 		};
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+			bindings = <
+			//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+			//│  GUI_X   │		│  GUI_Y   │  GUI_W   │	 GUI_K	 │   │	6	│  7	   │  	      │	 	 │  	    │
+			   GUI_X      &none	  GUI_Y      GUI_W	GUI_K	       &kp N6	  &kp N7     &none	&none	   &none
+                        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+			//│  GUI_C   │	LALT	│  LGUI	   │  LSHFT   │	 PRTSCN	 │   │	PG_UP	│  HOME	   │  UP      │	 END	 │          │
+			   GUI_C      &kp LALT	  &kp LGUI   &kp LSHFT	&kp PRCNT      &kp PG_UP  &kp HOME   &kp UARW	&kp END    &none 
+			//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+			//│          │	GUI_V	│     	   │          │	 GUI_Z	 │   │	PG_DN	│  LEFT    │  DOWN    │	 RIGHT	 │          │
+			   &none      GUI_V       &none      &none      GUI_Z          &kp PG_DN  &kp LARW   &kp DARW   &kp RARW   &none
+			//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+							     &trans	&trans	       &trans	  &trans
+			//				   ╰──────────┴──────────╯   ╰──────────┴──────────╯
+			>;
         };
 };
