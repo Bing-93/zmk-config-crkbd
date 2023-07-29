@@ -21,8 +21,8 @@
 //========================================================
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &hm LCTRL k1	&hm LALT k2  &hm LGUI k3  &hm LSHFT k4
-#define HRMR(k1,k2,k3,k4) &hm RSHFT k1	&hm RGUI k2  &hm RALT k3  &hm RCTRL k4
+#define HRML(k1,k2,k3,k4) &bhm LCTRL k1	&bhm LALT k2  &bhm LGUI k3  &bhm LSHFT k4
+#define HRMR(k1,k2,k3,k4) &bhm RSHFT k1	&bhm RGUI k2  &bhm RALT k3  &bhm RCTRL k4
 
 // MacOS shortcuts 
 #define GUI_C 	&kp LG(X)
@@ -34,6 +34,43 @@
 #define GUI_Z	&kp LG(Z)
 
 / {
+	behaviors {
+	        bhm: balanced_homerow_mods {
+	            compatible = "zmk,behavior-hold-tap";
+	            label = "HOMEROW_MODS";
+	            #binding-cells = <2>;
+	            tapping-term-ms = <200>;    // <---[[moderate duration]]
+	            quick-tap-ms = <0>;
+	            flavor = "balanced";
+	            bindings = <&kp>, <&kp>;
+	        };
+    	};
+	
+	combos {
+			compatible = "zmk,combos";
+	
+			// Both left thumb keys
+			combo_esc {
+				timeout-ms = <50>;
+				key-positions = <30 31>;
+				bindings = <&kp ESC>;
+			};
+	
+			// Both right thumb keys
+			combo_delete {
+				timeout-ms = <50>;
+				key-positions = <32 33>;
+				bindings = <&kp DEL>;
+			};
+	
+			// External left and right thumb keys
+			combo_caps_word {
+				timeout-ms = <50>;
+				key-positions = <31 32>;
+				bindings = <&caps_word>;
+			};
+		};
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -104,4 +141,5 @@
 			//				   ╰──────────┴──────────╯   ╰──────────┴──────────╯
 			>;
 		};
+	};
 };
