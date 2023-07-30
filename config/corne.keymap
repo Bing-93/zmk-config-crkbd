@@ -73,7 +73,7 @@
 			label = "TAP_DANCE_PSCRN";
 			#binding-cells = <0>;
 			tapping-term-ms = <150>;
-			bindings = <&kp LG(LS(LCTRL(4)))>, <&kp LG(LS(4))>;
+			bindings = <&kp LG(LS(LCTRL(N4)))>, <&kp LG(LS(N4))>;
 		};
     	};
 
