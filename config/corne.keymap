@@ -37,7 +37,7 @@
 #define HRMR(k1,k2,k3,k4) &bhm RSHFT k1	&bhm RGUI k2  &bhm RALT k3  &bhm RCTRL k4
 
 // MacOS shortcuts 
-#define GUI_C 	&kp LG(X)
+#define GUI_X 	&kp LG(X)
 #define GUI_Y 	&kp LG(Y)
 #define GUI_W 	&kp LG(W)
 #define GUI_K  	&kp LG(K)
@@ -73,7 +73,7 @@
 			label = "TAP_DANCE_PSCRN";
 			#binding-cells = <14>;
 			tapping-term-ms = <150>;
-			bindings = <&kp PSCRN_COPY>, <&kp PSCRN_SAVE>;
+			bindings = <PSCRN_COPY>, <PSCRN_SAVE>;
 		};
     	};
 
