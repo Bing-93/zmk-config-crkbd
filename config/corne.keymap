@@ -44,41 +44,11 @@
 #define GUI_C 	&kp LG(C)
 #define GUI_V	&kp LG(V)
 #define GUI_Z	&kp LG(Z)
-#define PSCRN_COPY &sk LG(LS(LCTRL(4)))
-#define PSCRN_SAVE &sk LG(LS(4))
+#define PSCRN_COPY &kp LG(LS(LCTRL(4)))
+#define PSCRN_SAVE &kp LG(LS(4))
 
 
 / {
-	macros {
-		pscrn_copy: pscrn_copy {
-			compatible = "zmk,behavior-macro";
-	                label = "MACRO_PSCRN_COPY";
-	                #binding-cells = <14>;
-	                bindings
-				= <&macro_press &kp LCTRL>
-				, <&macro_press &kp LCMD>
-				, <&macro_press &kp LSHFT>
-				, <&macro_tap &kp N4>
-				, <&macro_release &kp LCMD>
-				, <&macro_release &kp LCTRL>
-				, <&macro_release &kp LSHFT>
-				;
-		};
-
-		pscrn_save: pscrn_save {
-			compatible = "zmk,behavior-macro";
-	                label = "MACRO_PSCRN_SAVE";
-	                #binding-cells = <14>;
-	                bindings
-				= <&macro_press &kp LCMD>
-				, <&macro_press &kp LSHFT>
-				, <&macro_tap &kp N4>
-				, <&macro_release &kp LCMD>
-				, <&macro_release &kp LSHFT>
-				;
-		};
-	};
-
 	behaviors {
 	        bhm: balanced_homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
@@ -103,7 +73,7 @@
 			label = "TAP_DANCE_PSCRN";
 			#binding-cells = <0>;
 			tapping-term-ms = <150>;
-			bindings = <&pscrn_copy>, <&pscrn_save>;
+			bindings = <&kp LG(LS(LCTRL(4)))>, <&kp LG(LS(4))>;
 		};
     	};
 
