@@ -93,7 +93,7 @@
 		td0: tap_dance_0 {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_0";
-			#binding-cells = <34>;
+			#binding-cells = <0>;
 			tapping-term-ms = <150>;
 			bindings = <&kp LSHFT>, <&caps_word>;
 		};
@@ -101,7 +101,7 @@
 		td_pscrn: tap_dance_pscrn {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_PSCRN";
-			#binding-cells = <14>;
+			#binding-cells = <0>;
 			tapping-term-ms = <150>;
 			bindings = <&pscrn_copy>, <&pscrn_save>;
 		};
