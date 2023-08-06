@@ -88,55 +88,57 @@
 
 			combo_grave {
 				timeout-ms = <35>;
-				key-positions = <2 3>;
+				key-positions = <1 2>;
 				bindings = <&kp GRAVE>;
 			};
 
 			combo_esc {
 				timeout-ms = <35>;
-				key-positions = <3 4>;
+				key-positions = <2 3>;
 				bindings = <&kp ESC>;
 			};
 
 			combo_backspace {
 				timeout-ms = <50>;
-				key-positions = <15 16>;
+				key-positions = <14 15>;
 				bindings = <&kp BSPC>;
 			};
 
 			combo_delete {
 				timeout-ms = <50>;
-				key-positions = <16 17>;
+				key-positions = <15 16>;
 				bindings = <&kp DEL>;
 			};
 
 			combo_left_parenthesis {
 				timeout-ms = <35>;
-				key-positions = <8 9>;
+				key-positions = <7 8>;
 				bindings = <&kp LPAR>;
 			};
 
 			combo_right_parenthesis {
 				timeout-ms = <35>;
-				key-positions = <9 10>;
+				key-positions = <8 9>;
 				bindings = <&kp RPAR>;
 			};
 
 			combo_semicolon {
 				timeout-ms = <35>;
-				key-positions = <20 21>;
+				key-positions = <19 20>;
 				bindings = <&kp SEMI>;
 			};
 
 			combo_enter {
 				timeout-ms = <50>;
-				key-positions = <21 22>;
+				key-positions = <20 21>;
 				bindings = <&kp ENTER>;
 			};
 	};
 
         keymap {
                 compatible = "zmk,keymap";
+
+		// key-positions start from 0.
 
                 default_layer {
                         bindings  = <
