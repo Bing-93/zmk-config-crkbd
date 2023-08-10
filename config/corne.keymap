@@ -64,7 +64,7 @@
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_0";
 			#binding-cells = <0>;
-			tapping-term-ms = <150>;
+			tapping-term-ms = <3000>;
 			bindings = <&kp LSHFT>, <&caps_word>;
 		};
 
@@ -72,7 +72,7 @@
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_PSCRN";
 			#binding-cells = <0>;
-			tapping-term-ms = <150>;
+			tapping-term-ms = <300>;
 			bindings = <&kp LG(LS(LC(N4)))>, <&kp LG(LS(N4))>;
 		};
     	};
