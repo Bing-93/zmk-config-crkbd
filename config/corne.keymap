@@ -81,9 +81,9 @@
 			compatible = "zmk,combos";
 
 			combo_bluetooth {
-				timeout-ms = <35>;
+				timeout-ms = <100>;
 				key-positions = <39 40>;
-				bindings = <&mo 3>;
+				bindings = <&mo BLE>;
 			};
 
 			combo_grave {
@@ -152,7 +152,7 @@
 			//│  	     │	J	│  V	   │  D	      │	 M	 │  Z       │	| P	   │  H	      │  , <	 │  . >	    │  / ?     │          |
 			    &none       &kp J      &kp V      &kp D	 &kp M	    &kp Z	  &kp P	      &kp H     &kp COMMA   &kp DOT   &kp FSLH   &none
 			//╰──────────┴──────────┴─--───────┼─37───────┼─38───────┼─39───────┤   ├─40───────┼─41───────┼─42───────┼─--───────┼─---──────┴──────────╯
-			                                     &none	&mo 1	   &lt 2 TAB      &kp SPACE  &td0       &none
+			                                     &none	&mo CODE  &lt FUNC TAB   &kp SPACE    &td0       &none
 			//			           ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 			>;
                 };
