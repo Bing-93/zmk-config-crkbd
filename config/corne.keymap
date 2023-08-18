@@ -47,6 +47,9 @@
 #define PSCRN_COPY &kp LG(LS(LCTRL(4)))
 #define PSCRN_SAVE &kp LG(LS(4))
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
 
 / {
 	behaviors {
