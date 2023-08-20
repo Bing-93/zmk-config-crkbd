@@ -37,15 +37,17 @@
 #define HRMR(k1,k2,k3,k4) &bhm RSHFT k1	&bhm RGUI k2  &bhm RALT k3  &bhm RCTRL k4
 
 // MacOS shortcuts 
-#define GUI_X 	&kp LG(X)
-#define GUI_Y 	&kp LG(Y)
-#define GUI_W 	&kp LG(W)
-#define GUI_K  	&kp LG(K)
-#define GUI_C 	&kp LG(C)
-#define GUI_V	&kp LG(V)
-#define GUI_Z	&kp LG(Z)
-#define PSCRN_COPY &kp LG(LS(LCTRL(4)))
-#define PSCRN_SAVE &kp LG(LS(4))
+#define GUI_X 			&kp LG(X)
+#define GUI_Y 			&kp LG(Y)
+#define GUI_W 			&kp LG(W)
+#define GUI_K  			&kp LG(K)
+#define GUI_C 			&kp LG(C)
+#define GUI_V			&kp LG(V)
+#define GUI_Z			&kp LG(Z)
+#define PSCRN_COPY 		&kp LG(LS(LCTRL(4)))
+#define PSCRN_SAVE 		&kp LG(LS(4))
+#define SELECT_LEFT_WORD 	&kp LA(LS(LEFT)
+#define SELECT_RIGHT_WORD	&kp LA(LS(RIGHT)
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
