@@ -95,48 +95,56 @@
 				timeout-ms = <35>;
 				key-positions = <1 2>;
 				bindings = <&kp GRAVE>;
+				layers = <0>;
 			};
 
 			combo_esc {
 				timeout-ms = <35>;
 				key-positions = <2 3>;
 				bindings = <&kp ESC>;
+				layers = <0>;
 			};
 
 			combo_backspace {
 				timeout-ms = <50>;
 				key-positions = <14 15>;
 				bindings = <&kp BSPC>;
+				layers = <0>;
 			};
 
 			combo_delete {
 				timeout-ms = <50>;
 				key-positions = <15 16>;
 				bindings = <&kp DEL>;
+				layers = <0>;
 			};
 
 			combo_left_parenthesis {
 				timeout-ms = <35>;
 				key-positions = <7 8>;
 				bindings = <&kp LPAR>;
+				layers = <0>;
 			};
 
 			combo_right_parenthesis {
 				timeout-ms = <35>;
 				key-positions = <8 9>;
 				bindings = <&kp RPAR>;
+				layers = <0>;
 			};
 
 			combo_semicolon {
 				timeout-ms = <35>;
 				key-positions = <19 20>;
 				bindings = <&kp SEMI>;
+				layers = <0>;
 			};
 
 			combo_enter {
 				timeout-ms = <50>;
 				key-positions = <20 21>;
 				bindings = <&kp ENTER>;
+				layers = <0>;
 			};
 	};
 
@@ -157,7 +165,7 @@
 			//│  	     │	J	│  V	   │  D	      │	 M	 │  Z       │	| P	   │  H	      │  , <	 │  . >	    │  / ?     │          |
 			    &none       &kp J      &kp V      &kp D	 &kp M	    &kp Z	  &kp P	      &kp H     &kp COMMA   &kp DOT   &kp FSLH   &none
 			//╰──────────┴──────────┴─--───────┼─37───────┼─38───────┼─39───────┤   ├─40───────┼─41───────┼─42───────┼─--───────┼─---──────┴──────────╯
-			                                     &none	&mo CODE  &lt FUNC TAB   &kp SPACE    &td0       &none
+			                                     &none	&mo CODE  &lt FUNC TAB  &lt BLE SPACE  &td0       &none
 			//			           ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 			>;
                 };
