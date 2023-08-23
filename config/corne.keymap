@@ -79,7 +79,7 @@
 			label = "TAP_DANCE_GRAVE_TILDE";
 			#binding-cells = <0>;
 			tapping-term-ms = <500>;
-			bindings = <&sk LSHFT>, <&caps_word>;
+			bindings = <&kp GRAVE>, <&kp TILDE>;
 		};
 
 		td_pscrn: tap_dance_pscrn {
@@ -103,7 +103,7 @@
 			combo_grave {
 				timeout-ms = <35>;
 				key-positions = <1 2>;
-				bindings = <&kp td_grv>;
+				bindings = <&td_grv>;
 				layers = <0>;
 			};
 
