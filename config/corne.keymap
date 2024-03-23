@@ -50,7 +50,7 @@
 #define SELECT_RIGHT_WORD	&kp LA(LS(RIGHT)
 
 &caps_word {
-	continue-list = <UNDERSCORE MINUS>;
+	continue-list = <UNDERSCORE MINUS SPACE>;
 };
 
 / {
