@@ -100,6 +100,12 @@
 				bindings = <&mo BLE>;
 			};
 
+			combo_zmk_studio {
+				timeout-ms = <100>;
+				key-positions = <38 41>;
+				bindings = <&studio_unlock>;
+			};
+
 			combo_grave {
 				timeout-ms = <35>;
 				key-positions = <1 2>;
